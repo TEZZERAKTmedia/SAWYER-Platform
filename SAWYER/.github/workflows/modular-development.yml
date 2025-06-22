@@ -1,0 +1,45 @@
+name: Modular iOS app workflow (for development and testing)
+description: This is designed to make handle the build process for the modular repo where each unity project is it's own iOS app
+
+on:
+  push:
+    branches: [modular-deployment]
+#Note: This build will only work if the Unity project being build is closed. 
+# Make sure that you save and close the projects before pushing to this branch.
+
+jobs:
+  build: 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Build Main Unity Project
+        uses: actions/checkoout@v3
+      - run: |
+          /Applications/Unity/Hub/Editor/6000.1.4f1/Unity.app/Contents/MacOs/Unity \
+          -batchmode -moqraphics -quit \
+          -projectPath ${{ github.workspace}}/development/Main \
+          -executeMethod AutoBuildHookMain.BuildIOSApp
+      - run: echo "Main Build complete"
+
+      - name: Build AR-Mapping Unity Project
+        uses: actions/checkout@v3
+      - run: |
+          /Applications/Unity/Hub/Editor/6000.1.4f1/Unity.app/Contents/MacOS/Unity \
+          -batchmode -mographics -quit \
+          -projectPath ${{ github.workspace }}/development/AR-Mapping \
+          -executeMethod AutoBuildHookMapping.Buil
+          
+      - name: Build Editor Unity Project
+        uses: actions/checkout@v3
+      - run: echo "Starting Editor Build"
+      - run: | 
+          /Applications/Unity/Hub/Editor/6000.1.4f1/Unity.app/Contents/MacOSUnity \
+          -batchmode -nographics - quit \
+          -projectPath ${{ github.workspace }}/development/Editor
+          -executeMethod AutoBuildHookEditor.BuildIOSApp
+      - run: echo "Editor Build complete"
+
+
+
+      
+      
+ 
