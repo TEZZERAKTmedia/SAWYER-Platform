@@ -27,3 +27,6 @@
 Packages/com.unity.*
 Library/PackageCache/
 SAWYER/development/Builds/
+SAWYER/development/Builds/
+SAWYER/development/Unity-3d-UI/Library/
+SAWYER/development/Unity-AR-Mapping/Library/
