@@ -26,3 +26,4 @@
 # Unity Package cache (safe to ignore)
 Packages/com.unity.*
 Library/PackageCache/
+SAWYER/development/Builds/
