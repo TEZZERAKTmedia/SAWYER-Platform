@@ -5,9 +5,9 @@
 UNITY_PATH="/Applications/Unity/Hub/Editor/6000.1.4f1/Unity.app/Contents/MacOS/Unity"
 
 declare -a builds=(
-  "development/Unity-3d-UI:AutoBuildHookUI.BuildIOSApp"
-  "development/Unity-AR-Mapping:AutoBuildHookARMapping.BuildIOSApp"
-  "development/Unity-Editor:AutoBuildHookEditor.BuildIOSApp"
+  "development/Unity-3d-UI:AutoBuildHookUI.BuildiOSApp"
+  "development/Unity-AR-Mapping:AutoBuildHookARMapping.BuildiOSApp"
+  "development/Unity-Editor:AutoBuildHookEditor.BuildiOSApp"
 )
 
 mkdir -p Logs
