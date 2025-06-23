@@ -17,7 +17,7 @@ jobs:
           /Applications/Unity/Hub/Editor/6000.1.4f1/Unity.app/Contents/MacOs/Unity \
           -batchmode -nographics -quit \
           -projectPath ${{ github.workspace}}/development/Main \
-          -executeMethod AutoBuildHookMain.BuildIOSApp
+          -executeMethod AutoBuildHookUI.BuildIOSApp
       - run: echo "Main Build complete"
 
       - name: Build AR-Mapping Unity Project
@@ -26,7 +26,7 @@ jobs:
           /Applications/Unity/Hub/Editor/6000.1.4f1/Unity.app/Contents/MacOS/Unity \
           -batchmode -nographics -quit \
           -projectPath ${{ github.workspace }}/development/AR-Mapping \
-          -executeMethod AutoBuildHookMapping.BuildIOSApp
+          -executeMethod AutoBuildHookARMapping.BuildIOSApp
           
       - name: Build Editor Unity Project
         uses: actions/checkout@v3

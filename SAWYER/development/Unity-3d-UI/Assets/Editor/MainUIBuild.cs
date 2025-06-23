@@ -4,7 +4,7 @@ using System.IO;
 using UnityEditor.Build.Reporting;
 
 
-public static class handleUIBuild
+public static class AutoBuildHookUI
 {
     [MenuItem("Build/Build Main UI")]
     public static void BuildMainUI()
@@ -29,14 +29,14 @@ public static class handleUIBuild
         PlayerSettings.SetArchitecture(BuildTargetGroup.iOS, 1);
 
         // Prevent portrait mode
-        PlayerSettings.DefaultInterfaceOrientation = UIOrientation.LandscapeLeft;
+        PlayerSettings.defaultInterfaceOrientation = UIOrientation.LandscapeLeft;
         PlayerSettings.allowedAutorotateToPortrait = false;
         PlayerSettings.allowedAutorotateToPortraitUpsideDown = false;
-        PlayerSettings.allowedAutorotateToLandscapeRight = true; // If you want to support both
+        PlayerSettings.allowedAutorotateToLandscapeRight = true;
         PlayerSettings.allowedAutorotateToLandscapeLeft = true;
-        // Set the default orientation to landscape left
-        PlayerSettings.iOS.requiresFullScreen = true; // Ensure full screen mode
-        PlayerSettings.iOS.statusBarHidden = true; // Hide status bar for a cleaner UI
+        PlayerSettings.iOS.requiresFullScreen = true;
+
+        
         
         string[] scenes = new string[]
         {

@@ -19,6 +19,16 @@
       "source": "registry",
       "testable": false
     },
+    "com.unity.ugui@2.0.0": {
+      "name": "com.unity.ugui",
+      "displayName": "Unity UI",
+      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.unity.ugui@5c9fd4989cdd",
+      "fingerprint": "5c9fd4989cdd8e57279d95edb174435a77f5c853",
+      "editorCompatibility": "2019.2.0a1",
+      "version": "2.0.0",
+      "source": "builtin",
+      "testable": false
+    },
     "com.unity.collab-proxy@2.8.2": {
       "name": "com.unity.collab-proxy",
       "displayName": "Version Control",
@@ -107,16 +117,6 @@
       "editorCompatibility": "2021.3.0a1",
       "version": "1.8.8",
       "source": "registry",
-      "testable": false
-    },
-    "com.unity.ugui@2.0.0": {
-      "name": "com.unity.ugui",
-      "displayName": "Unity UI",
-      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.unity.ugui@5c9fd4989cdd",
-      "fingerprint": "5c9fd4989cdd8e57279d95edb174435a77f5c853",
-      "editorCompatibility": "2019.2.0a1",
-      "version": "2.0.0",
-      "source": "builtin",
       "testable": false
     },
     "com.unity.visualscripting@1.9.6": {
