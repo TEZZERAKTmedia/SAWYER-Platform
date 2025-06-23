@@ -27,6 +27,16 @@ public static class handleUIBuild
         PlayerSettings.iOS.sdkVersion = iOSSdkVersion.DeviceSDK;
         PlayerSettings.SetScriptingBackend(BuildTargetGroup.iOS, ScriptingImplementation.IL2CPP);
         PlayerSettings.SetArchitecture(BuildTargetGroup.iOS, 1);
+
+        // Prevent portrait mode
+        PlayerSettings.DefaultInterfaceOrientation = UIOrientation.LandscapeLeft;
+        PlayerSettings.allowedAutorotateToPortrait = false;
+        PlayerSettings.allowedAutorotateToPortraitUpsideDown = false;
+        PlayerSettings.allowedAutorotateToLandscapeRight = true; // If you want to support both
+        PlayerSettings.allowedAutorotateToLandscapeLeft = true;
+        // Set the default orientation to landscape left
+        PlayerSettings.iOS.requiresFullScreen = true; // Ensure full screen mode
+        PlayerSettings.iOS.statusBarHidden = true; // Hide status bar for a cleaner UI
         
         string[] scenes = new string[]
         {

@@ -4,7 +4,7 @@ description: This is designed to make handle the build process for the modular r
 on:
   push:
     branches: [modular-development]
-#Note: This build will only work if the Unity project being build is closed. 
+#Note: This build will only work if the Unity project being built is closed. 
 # Make sure that you save and close the projects before pushing to this branch.
 
 jobs:
@@ -26,7 +26,7 @@ jobs:
           /Applications/Unity/Hub/Editor/6000.1.4f1/Unity.app/Contents/MacOS/Unity \
           -batchmode -nographics -quit \
           -projectPath ${{ github.workspace }}/development/AR-Mapping \
-          -executeMethod AutoBuildHookMapping.Buil
+          -executeMethod AutoBuildHookMapping.BuildIOSApp
           
       - name: Build Editor Unity Project
         uses: actions/checkout@v3
