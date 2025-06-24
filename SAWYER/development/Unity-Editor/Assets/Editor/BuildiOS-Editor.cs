@@ -37,7 +37,7 @@ public static class AutoBuildHookEditor
 
         string[] scenes = new string[]
         {
-            "Assets/Scenes/Editor/Editor_Unity.unity",
+            "Assets/Scenes/Editor.unity",
         };
 
         BuildPlayerOptions buildOptions = new BuildPlayerOptions

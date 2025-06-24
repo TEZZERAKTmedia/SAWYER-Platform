@@ -40,7 +40,7 @@ public static class AutoBuildHookUI
         
         string[] scenes = new string[]
         {
-            "Assets/Scenes/MainUI.unity",
+            "Assets/Scenes/UI.unity",
         };
 
         BuildPlayerOptions buildOptions = new BuildPlayerOptions

@@ -25,7 +25,7 @@ public static class AutoBuildHookARMapping
         
         BuildPlayerOptions buildOptions = new BuildPlayerOptions
         {
-            scenes = new[] { "Assets/Scenes/mapping-ar-save.unity"},
+            scenes = new[] { "Assets/Scenes/AR.unity"},
             locationPathName = buildPath,
             target = BuildTarget.iOS,
             options = BuildOptions.None,
