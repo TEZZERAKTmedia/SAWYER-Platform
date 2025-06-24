@@ -8,15 +8,15 @@ public static class AutoBuildHookARMapping
     [MenuItem("Build/Build iOS App")]
     public static void BuildiOSApp()
     {
-        string buildPath = "../Builds/AR-Mapping";
+        string buildPath = "../../Application/MainUI/Frameworks/ARMapping";
 
         if (Directory.Exists(buildPath))  
             Directory.Delete(buildPath, true);
         Directory.CreateDirectory(buildPath);
 
-        PlayerSettings.applicationIdentifier = "com.techtonic.sawyer.ar.mapping";
+        PlayerSettings.applicationIdentifier = "com.techtonic.sawyer.ar.integrated";
         PlayerSettings.companyName = "Techtonic-Robotics";
-        PlayerSettings.productName = "AR Mapping";
+        PlayerSettings.productName = "AR Mapping Framework";
         PlayerSettings.bundleVersion = "1.0.0";
         PlayerSettings.iOS.buildNumber = "1";
         PlayerSettings.iOS.sdkVersion = iOSSdkVersion.DeviceSDK;
@@ -25,7 +25,7 @@ public static class AutoBuildHookARMapping
         
         BuildPlayerOptions buildOptions = new BuildPlayerOptions
         {
-            scenes = new[] { "Assets/Scenes/mapping-ar-save.unity"},
+            scenes = new[] { "Assets/Scenes/AR.unity"},
             locationPathName = buildPath,
             target = BuildTarget.iOS,
             options = BuildOptions.None,

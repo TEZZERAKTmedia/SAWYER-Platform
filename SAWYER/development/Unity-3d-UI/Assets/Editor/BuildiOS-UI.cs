@@ -9,7 +9,7 @@ public static class AutoBuildHookUI
     [MenuItem("Build/Build Main UI")]
     public static void BuildiOSApp()
     {
-        string buildPath = "../Builds/MainUI";
+        string buildPath = "../../Application/MainUI";
 
         if (Directory.Exists(buildPath))
         {
@@ -40,7 +40,7 @@ public static class AutoBuildHookUI
         
         string[] scenes = new string[]
         {
-            "Assets/Scenes/MainUI.unity",
+            "Assets/Scenes/main.unity",
         };
 
         BuildPlayerOptions buildOptions = new BuildPlayerOptions

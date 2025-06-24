@@ -8,7 +8,7 @@ public static class AutoBuildHookEditor
     [MenuItem("Build/Build iOS App")]
     public static void BuildiOSApp()
     {
-        string buildPath = "../Builds/Editor";
+        string buildPath = "../../Application/MainUI/Frameworks/Editor";
 
         if (Directory.Exists(buildPath))
         {
@@ -18,7 +18,7 @@ public static class AutoBuildHookEditor
 
         Directory.CreateDirectory(buildPath);
 
-        PlayerSettings.applicationIdentifier = "com.sawyer.editor.modular";
+        PlayerSettings.applicationIdentifier = "com.sawyer.editor.integrated";
         PlayerSettings.companyName = "Techtonic-Robotics";
         PlayerSettings.productName = "Editor Modular";
         PlayerSettings.bundleVersion = "1.0.0";
@@ -37,7 +37,7 @@ public static class AutoBuildHookEditor
 
         string[] scenes = new string[]
         {
-            "Assets/Scenes/Editor/Editor_Unity.unity",
+            "Assets/Scenes/Editor.unity",
         };
 
         BuildPlayerOptions buildOptions = new BuildPlayerOptions

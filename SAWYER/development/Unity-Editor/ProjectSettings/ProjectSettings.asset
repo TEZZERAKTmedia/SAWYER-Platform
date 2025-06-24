@@ -167,7 +167,7 @@ PlayerSettings:
   androidMinAspectRatio: 1
   applicationIdentifier:
     Android: com.UnityTechnologies.UniversalMobile3DTemplate
-    Standalone: com.sawyer.editor.modular
+    Standalone: com.sawyer.editor.integrated
     iPhone: com.UnityTechnologies.UniversalMobile3DTemplate
   buildNumber:
     Standalone: 0
