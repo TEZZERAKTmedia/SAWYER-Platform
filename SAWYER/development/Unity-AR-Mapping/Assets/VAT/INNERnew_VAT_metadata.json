@@ -1,0 +1,19 @@
+{
+  "vertex_count": 5124,
+  "frame_count": 300,
+  "position_min_bounds": [
+    -0.7991644144058228,
+    -0.8094459176063538,
+    -0.7869827151298523
+  ],
+  "position_max_bounds": [
+    0.8566756844520569,
+    0.8384463787078857,
+    0.8233827948570251
+  ],
+  "normal_encoding": "0_to_1_range",
+  "textures": {
+    "position": "INNERnew_VAT_Position.png",
+    "normal": "INNERnew_VAT_Normal.png"
+  }
+}

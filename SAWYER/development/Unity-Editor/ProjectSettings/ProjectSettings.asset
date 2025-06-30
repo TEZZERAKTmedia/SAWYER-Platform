@@ -168,7 +168,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.UnityTechnologies.UniversalMobile3DTemplate
     Standalone: com.sawyer.editor.modular
-    iPhone: com.UnityTechnologies.UniversalMobile3DTemplate
+    iPhone: com.sawyer.editor.modular
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -521,6 +521,9 @@ PlayerSettings:
       m_SubKind: 
   m_BuildTargetBatching:
   - m_BuildTarget: Standalone
+    m_StaticBatching: 1
+    m_DynamicBatching: 0
+  - m_BuildTarget: iPhone
     m_StaticBatching: 1
     m_DynamicBatching: 0
   m_BuildTargetShaderSettings: []

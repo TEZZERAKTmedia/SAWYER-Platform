@@ -9,6 +9,16 @@
     "/Applications/Unity/Hub/Editor/6000.1.4f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/BuiltInPackagesCombined.sha1"
   ],
   "outputs": {
+    "com.unity.addressables@2.4.6": {
+      "name": "com.unity.addressables",
+      "displayName": "Addressables",
+      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.unity.addressables@16eddacf275e",
+      "fingerprint": "16eddacf275e88b6adce07ddbbd97c62ee1f73e0",
+      "editorCompatibility": "2023.1.0a1",
+      "version": "2.4.6",
+      "source": "registry",
+      "testable": false
+    },
     "com.unity.ai.navigation@2.0.7": {
       "name": "com.unity.ai.navigation",
       "displayName": "AI Navigation",
@@ -17,16 +27,6 @@
       "editorCompatibility": "6000.0.0a1",
       "version": "2.0.7",
       "source": "registry",
-      "testable": false
-    },
-    "com.unity.ugui@2.0.0": {
-      "name": "com.unity.ugui",
-      "displayName": "Unity UI",
-      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.unity.ugui@5c9fd4989cdd",
-      "fingerprint": "5c9fd4989cdd8e57279d95edb174435a77f5c853",
-      "editorCompatibility": "2019.2.0a1",
-      "version": "2.0.0",
-      "source": "builtin",
       "testable": false
     },
     "com.unity.collab-proxy@2.8.2": {
@@ -46,6 +46,16 @@
       "fingerprint": "9d89ad59ac867821b74ba85f6a2a7b7f20e49e1b",
       "editorCompatibility": "2019.4.0a1",
       "version": "2.4.0",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.formats.fbx@5.1.3": {
+      "name": "com.unity.formats.fbx",
+      "displayName": "FBX Exporter",
+      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.unity.formats.fbx@db39de05b0db",
+      "fingerprint": "db39de05b0dbacefb3aa3035d97d497649e2e711",
+      "editorCompatibility": "2020.3.0a1",
+      "version": "5.1.3",
       "source": "registry",
       "testable": false
     },
@@ -89,6 +99,16 @@
       "source": "builtin",
       "testable": false
     },
+    "com.unity.recorder@5.1.2": {
+      "name": "com.unity.recorder",
+      "displayName": "Recorder",
+      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.unity.recorder@979a3db2a781",
+      "fingerprint": "979a3db2a7818d9c4852c886631b01e394d80af0",
+      "editorCompatibility": "2023.1.1f1",
+      "version": "5.1.2",
+      "source": "registry",
+      "testable": false
+    },
     "com.unity.render-pipelines.universal@17.1.0": {
       "name": "com.unity.render-pipelines.universal",
       "displayName": "Universal Render Pipeline",
@@ -119,6 +139,16 @@
       "source": "registry",
       "testable": false
     },
+    "com.unity.ugui@2.0.0": {
+      "name": "com.unity.ugui",
+      "displayName": "Unity UI",
+      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.unity.ugui@5c9fd4989cdd",
+      "fingerprint": "5c9fd4989cdd8e57279d95edb174435a77f5c853",
+      "editorCompatibility": "2019.2.0a1",
+      "version": "2.0.0",
+      "source": "builtin",
+      "testable": false
+    },
     "com.unity.visualscripting@1.9.6": {
       "name": "com.unity.visualscripting",
       "displayName": "Visual Scripting",
@@ -126,6 +156,56 @@
       "fingerprint": "7dcdc439b230145cec4202cd6ebad135736e0c14",
       "editorCompatibility": "2021.3.0a1",
       "version": "1.9.6",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.xr.arcore@6.1.1": {
+      "name": "com.unity.xr.arcore",
+      "displayName": "Google ARCore XR Plugin",
+      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.unity.xr.arcore@e763ae7fb3c5",
+      "fingerprint": "e763ae7fb3c5f43fade9e7023c2a282dc88e173b",
+      "editorCompatibility": "6000.0.0a1",
+      "version": "6.1.1",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.xr.arfoundation@6.1.1": {
+      "name": "com.unity.xr.arfoundation",
+      "displayName": "AR Foundation",
+      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.unity.xr.arfoundation@ef86c118adc4",
+      "fingerprint": "ef86c118adc4f76878c64ef2ecf492bd624c7f84",
+      "editorCompatibility": "6000.0.0a1",
+      "version": "6.1.1",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.xr.arkit@6.1.1": {
+      "name": "com.unity.xr.arkit",
+      "displayName": "Apple ARKit XR Plugin",
+      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.unity.xr.arkit@18b294bd09f0",
+      "fingerprint": "18b294bd09f0ef771e9116f0813cf58a69114427",
+      "editorCompatibility": "6000.0.0a1",
+      "version": "6.1.1",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.xr.interaction.toolkit@3.1.2": {
+      "name": "com.unity.xr.interaction.toolkit",
+      "displayName": "XR Interaction Toolkit",
+      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.unity.xr.interaction.toolkit@42ef3600567b",
+      "fingerprint": "42ef3600567b34a1e5aea8aad2362e1e335d4e7c",
+      "editorCompatibility": "2021.3.0a1",
+      "version": "3.1.2",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.xr.management@4.5.1": {
+      "name": "com.unity.xr.management",
+      "displayName": "XR Plugin Management",
+      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.unity.xr.management@20be87dea580",
+      "fingerprint": "20be87dea58031bdc9e932e7e7cbe7d270db0e4a",
+      "editorCompatibility": "2020.3.15f1",
+      "version": "4.5.1",
       "source": "registry",
       "testable": false
     },
@@ -401,6 +481,46 @@
       "source": "builtin",
       "testable": false
     },
+    "com.unity.xr.core-utils@2.5.2": {
+      "name": "com.unity.xr.core-utils",
+      "displayName": "XR Core Utilities",
+      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.unity.xr.core-utils@5b282bc7378d",
+      "fingerprint": "5b282bc7378d257fcefbecad81c641874f85d033",
+      "editorCompatibility": "2021.3.0f1",
+      "version": "2.5.2",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.xr.legacyinputhelpers@2.1.12": {
+      "name": "com.unity.xr.legacyinputhelpers",
+      "displayName": "XR Legacy Input Helpers",
+      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.unity.xr.legacyinputhelpers@b7579e86f3b4",
+      "fingerprint": "b7579e86f3b456c909fda6b875fba7ab1eeb1322",
+      "editorCompatibility": "2019.4.0a1",
+      "version": "2.1.12",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.mathematics@1.3.2": {
+      "name": "com.unity.mathematics",
+      "displayName": "Mathematics",
+      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.unity.mathematics@8017b507cc74",
+      "fingerprint": "8017b507cc74bf0a1dd14b18aa860569f807314d",
+      "editorCompatibility": "2021.3.0a1",
+      "version": "1.3.2",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.editorcoroutines@1.0.0": {
+      "name": "com.unity.editorcoroutines",
+      "displayName": "Editor Coroutines",
+      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.unity.editorcoroutines@7d48783e7b8c",
+      "fingerprint": "7d48783e7b8cfcee5f8ef9ba787ed0d9dad4ebca",
+      "editorCompatibility": "2018.1.0a1",
+      "version": "1.0.0",
+      "source": "registry",
+      "testable": false
+    },
     "com.unity.ext.nunit@2.0.5": {
       "name": "com.unity.ext.nunit",
       "displayName": "Custom NUnit",
@@ -441,6 +561,56 @@
       "source": "builtin",
       "testable": false
     },
+    "com.unity.collections@2.5.1": {
+      "name": "com.unity.collections",
+      "displayName": "Collections",
+      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.unity.collections@56bff8827a7e",
+      "fingerprint": "56bff8827a7ef6d44fcee4f36e558a74da89c1a0",
+      "editorCompatibility": "2022.3.11f1",
+      "version": "2.5.1",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.bindings.openimageio@1.0.0": {
+      "name": "com.unity.bindings.openimageio",
+      "displayName": "OpenImageIO Bindings",
+      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.unity.bindings.openimageio@3229d2aa5c76",
+      "fingerprint": "3229d2aa5c76c70269dc58c79d5864ec84fa4a74",
+      "editorCompatibility": "2023.1.0a1",
+      "version": "1.0.0",
+      "source": "registry",
+      "testable": false
+    },
+    "com.autodesk.fbx@5.1.1": {
+      "name": "com.autodesk.fbx",
+      "displayName": "Autodesk FBX SDK for Unity",
+      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.autodesk.fbx@5797ff6b31c7",
+      "fingerprint": "5797ff6b31c7c66189bffe1adc9cbf0ad5a9cbbf",
+      "editorCompatibility": "2020.3.0a1",
+      "version": "5.1.1",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.profiling.core@1.0.2": {
+      "name": "com.unity.profiling.core",
+      "displayName": "Unity Profiling Core API",
+      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.unity.profiling.core@aac7b93912bc",
+      "fingerprint": "aac7b93912bc5df5fe06b04ff1b758493cdc2346",
+      "editorCompatibility": "2020.1.0a1",
+      "version": "1.0.2",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.scriptablebuildpipeline@2.3.8": {
+      "name": "com.unity.scriptablebuildpipeline",
+      "displayName": "Scriptable Build Pipeline",
+      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.unity.scriptablebuildpipeline@46e2441c9992",
+      "fingerprint": "46e2441c999260185f73b464c3555f0d43bc03a3",
+      "editorCompatibility": "2023.1.0a1",
+      "version": "2.3.8",
+      "source": "registry",
+      "testable": false
+    },
     "com.unity.searcher@4.9.3": {
       "name": "com.unity.searcher",
       "displayName": "Searcher",
@@ -458,26 +628,6 @@
       "fingerprint": "59eb6f11d2422f95682320d9daa3e79fdb076744",
       "editorCompatibility": "2020.3.0a1",
       "version": "1.8.21",
-      "source": "registry",
-      "testable": false
-    },
-    "com.unity.mathematics@1.3.2": {
-      "name": "com.unity.mathematics",
-      "displayName": "Mathematics",
-      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.unity.mathematics@8017b507cc74",
-      "fingerprint": "8017b507cc74bf0a1dd14b18aa860569f807314d",
-      "editorCompatibility": "2021.3.0a1",
-      "version": "1.3.2",
-      "source": "registry",
-      "testable": false
-    },
-    "com.unity.collections@2.5.1": {
-      "name": "com.unity.collections",
-      "displayName": "Collections",
-      "resolvedPath": "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-3d-UI/Library/PackageCache/com.unity.collections@56bff8827a7e",
-      "fingerprint": "56bff8827a7ef6d44fcee4f36e558a74da89c1a0",
-      "editorCompatibility": "2022.3.11f1",
-      "version": "2.5.1",
       "source": "registry",
       "testable": false
     },
