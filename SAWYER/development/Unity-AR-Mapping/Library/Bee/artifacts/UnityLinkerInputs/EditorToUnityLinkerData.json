@@ -4,7 +4,7 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "ARTemplateMenuManager",
+            "fullManagedTypeName": "BarycentricMesh",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -16,10 +16,45 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "CameraMenuController",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "CanvasPanelManager",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "CellRenderer",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "DelayedCallManager",
             "fullManagedTypeName": "",
             "moduleName": "Core",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "DeviceCellAssetAssigner",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "DevicesGridController",
+            "moduleName": "",
             "usedInScenes": []
         },
         {
@@ -28,7 +63,7 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -37,7 +72,7 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -50,7 +85,7 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "GoalManager",
+            "fullManagedTypeName": "Joystick",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -60,7 +95,7 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -76,7 +111,7 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -92,7 +127,7 @@
             "fullManagedTypeName": "",
             "moduleName": "AI",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -103,17 +138,17 @@
             "usedInScenes": []
         },
         {
-            "managedAssemblyName": "Assembly-CSharp.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "PlaneClassifier",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
             "managedAssemblyName": "",
             "nativeClass": "ResourceManager",
             "fullManagedTypeName": "",
             "moduleName": "Core",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "ResponsiveGrid",
+            "moduleName": "",
             "usedInScenes": []
         },
         {
@@ -128,6 +163,13 @@
             "nativeClass": "ShaderNameRegistry",
             "fullManagedTypeName": "",
             "moduleName": "Core",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Spinner",
+            "moduleName": "",
             "usedInScenes": []
         },
         {
@@ -175,25 +217,23 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "Unity.AR.Companion.Mobile.CutoutMaskUI",
+            "fullManagedTypeName": "TMPWithBackground",
             "moduleName": "",
             "usedInScenes": []
         },
         {
-            "managedAssemblyName": "Unity.XR.CoreUtils.dll",
+            "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "Unity.XR.CoreUtils.XROrigin",
+            "fullManagedTypeName": "UISwitchSelector",
             "moduleName": "",
             "usedInScenes": []
         },
         {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "AnimatorController",
-            "fullManagedTypeName": "UnityEditor.Animations.AnimatorController",
-            "moduleName": "Animation",
-            "usedInScenes": [
-                "Assets/Scenes/AR.unity"
-            ]
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UITMPPageController",
+            "moduleName": "",
+            "usedInScenes": []
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
@@ -222,7 +262,7 @@
             "fullManagedTypeName": "UnityEditor.MonoScript",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -262,38 +302,11 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Animation",
-            "fullManagedTypeName": "UnityEngine.Animation",
-            "moduleName": "Animation",
-            "usedInScenes": [
-                "Assets/Scenes/AR.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "AnimationClip",
-            "fullManagedTypeName": "UnityEngine.AnimationClip",
-            "moduleName": "Animation",
-            "usedInScenes": [
-                "Assets/Scenes/AR.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Animator",
-            "fullManagedTypeName": "UnityEngine.Animator",
-            "moduleName": "Animation",
-            "usedInScenes": [
-                "Assets/Scenes/AR.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "AudioBehaviour",
             "fullManagedTypeName": "UnityEngine.AudioBehaviour",
             "moduleName": "Audio",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -302,7 +315,7 @@
             "fullManagedTypeName": "UnityEngine.AudioListener",
             "moduleName": "Audio",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -311,7 +324,25 @@
             "fullManagedTypeName": "UnityEngine.Behaviour",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "BoxCollider",
+            "fullManagedTypeName": "UnityEngine.BoxCollider",
+            "moduleName": "Physics",
+            "usedInScenes": [
+                "Assets/Scenes/UI.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "BoxCollider2D",
+            "fullManagedTypeName": "UnityEngine.BoxCollider2D",
+            "moduleName": "Physics2D",
+            "usedInScenes": [
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -320,7 +351,7 @@
             "fullManagedTypeName": "UnityEngine.Camera",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -329,7 +360,7 @@
             "fullManagedTypeName": "UnityEngine.Canvas",
             "moduleName": "UI",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -338,7 +369,7 @@
             "fullManagedTypeName": "UnityEngine.CanvasGroup",
             "moduleName": "UI",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -347,16 +378,7 @@
             "fullManagedTypeName": "UnityEngine.CanvasRenderer",
             "moduleName": "UI",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "CapsuleCollider",
-            "fullManagedTypeName": "UnityEngine.CapsuleCollider",
-            "moduleName": "Physics",
-            "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -365,7 +387,16 @@
             "fullManagedTypeName": "UnityEngine.Collider",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Collider2D",
+            "fullManagedTypeName": "UnityEngine.Collider2D",
+            "moduleName": "Physics2D",
+            "usedInScenes": [
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -374,7 +405,7 @@
             "fullManagedTypeName": "UnityEngine.Component",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -390,7 +421,7 @@
             "fullManagedTypeName": "UnityEngine.Cubemap",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -408,12 +439,19 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "UnityEngine.UI.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.EventSystems.PhysicsRaycaster",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Font",
             "fullManagedTypeName": "UnityEngine.Font",
             "moduleName": "TextRendering",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -422,7 +460,7 @@
             "fullManagedTypeName": "UnityEngine.GameObject",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -456,7 +494,14 @@
         {
             "managedAssemblyName": "Unity.InputSystem.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.InputSystem.XR.TrackedPoseDriver",
+            "fullManagedTypeName": "UnityEngine.InputSystem.RemoteInputPlayerConnection",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.InputSystem.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.InputSystem.UI.InputSystemUIInputModule",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -466,7 +511,7 @@
             "fullManagedTypeName": "UnityEngine.Light",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -475,16 +520,7 @@
             "fullManagedTypeName": "UnityEngine.LightmapSettings",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "LineRenderer",
-            "fullManagedTypeName": "UnityEngine.LineRenderer",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -493,7 +529,7 @@
             "fullManagedTypeName": "UnityEngine.Material",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -502,16 +538,7 @@
             "fullManagedTypeName": "UnityEngine.Mesh",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "MeshCollider",
-            "fullManagedTypeName": "UnityEngine.MeshCollider",
-            "moduleName": "Physics",
-            "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -520,7 +547,7 @@
             "fullManagedTypeName": "UnityEngine.MeshFilter",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -529,7 +556,7 @@
             "fullManagedTypeName": "UnityEngine.MeshRenderer",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -538,16 +565,7 @@
             "fullManagedTypeName": "UnityEngine.MonoBehaviour",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Motion",
-            "fullManagedTypeName": "UnityEngine.Motion",
-            "moduleName": "Animation",
-            "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -556,25 +574,7 @@
             "fullManagedTypeName": "UnityEngine.Object",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "ParticleSystem",
-            "fullManagedTypeName": "UnityEngine.ParticleSystem",
-            "moduleName": "ParticleSystem",
-            "usedInScenes": [
-                "Assets/Scenes/AR.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "ParticleSystemRenderer",
-            "fullManagedTypeName": "UnityEngine.ParticleSystemRenderer",
-            "moduleName": "ParticleSystem",
-            "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -590,7 +590,7 @@
             "fullManagedTypeName": "UnityEngine.RectTransform",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -599,7 +599,7 @@
             "fullManagedTypeName": "UnityEngine.Renderer",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -969,6 +969,13 @@
         {
             "managedAssemblyName": "Unity.RenderPipelines.Universal.Runtime.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Rendering.Universal.UniversalAdditionalCameraData",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.RenderPipelines.Universal.Runtime.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.Rendering.Universal.UniversalAdditionalLightData",
             "moduleName": "",
             "usedInScenes": []
@@ -1021,25 +1028,7 @@
             "fullManagedTypeName": "UnityEngine.RenderSettings",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Rigidbody",
-            "fullManagedTypeName": "UnityEngine.Rigidbody",
-            "moduleName": "Physics",
-            "usedInScenes": [
-                "Assets/Scenes/AR.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "RuntimeAnimatorController",
-            "fullManagedTypeName": "UnityEngine.RuntimeAnimatorController",
-            "moduleName": "Animation",
-            "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -1048,7 +1037,16 @@
             "fullManagedTypeName": "UnityEngine.Shader",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "SphereCollider",
+            "fullManagedTypeName": "UnityEngine.SphereCollider",
+            "moduleName": "Physics",
+            "usedInScenes": [
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -1057,7 +1055,7 @@
             "fullManagedTypeName": "UnityEngine.Sprite",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -1066,7 +1064,7 @@
             "fullManagedTypeName": "UnityEngine.TextAsset",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -1075,7 +1073,7 @@
             "fullManagedTypeName": "UnityEngine.Texture",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -1084,7 +1082,7 @@
             "fullManagedTypeName": "UnityEngine.Texture2D",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -1093,7 +1091,7 @@
             "fullManagedTypeName": "UnityEngine.Transform",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AR.unity"
+                "Assets/Scenes/UI.unity"
             ]
         },
         {
@@ -1120,14 +1118,14 @@
         {
             "managedAssemblyName": "UnityEngine.UI.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.UI.Dropdown",
+            "fullManagedTypeName": "UnityEngine.UI.GraphicRaycaster",
             "moduleName": "",
             "usedInScenes": []
         },
         {
             "managedAssemblyName": "UnityEngine.UI.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.UI.GraphicRaycaster",
+            "fullManagedTypeName": "UnityEngine.UI.GridLayoutGroup",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -1156,6 +1154,13 @@
             "managedAssemblyName": "UnityEngine.UI.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.UI.Mask",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.UI.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.UI.RawImage",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -1202,163 +1207,9 @@
             "usedInScenes": []
         },
         {
-            "managedAssemblyName": "Unity.XR.ARFoundation.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.ARFoundation.ARCameraBackground",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.ARFoundation.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.ARFoundation.ARCameraManager",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.ARFoundation.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.ARFoundation.ARDebugMenu",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.ARFoundation.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.ARFoundation.ARInputManager",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.ARFoundation.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.ARFoundation.ARPlane",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.ARFoundation.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.ARFoundation.ARPlaneManager",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.ARFoundation.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.ARFoundation.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.ARFoundation.ARRaycastManager",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.ARFoundation.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.ARFoundation.ARSession",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.ARFoundation.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.ARFoundation.DebugSlider",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.ARFoundation.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.ARFoundation.ToolButton",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
             "managedAssemblyName": "Unity.XR.ARKit.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.XR.ARKit.ARKitLoader",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.Interaction.Toolkit.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Rendering.ColorMaterialPropertyAffordanceReceiver",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.Interaction.Toolkit.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Rendering.MaterialPropertyBlockHelper",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.Interaction.Toolkit.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.State.XRInteractableAffordanceStateProvider",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.Interaction.Toolkit.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Theme.Primitives.ColorAffordanceThemeDatum",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.Interaction.Toolkit.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.AR.Inputs.ScreenSpacePinchScaleInput",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.Interaction.Toolkit.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.AR.Inputs.ScreenSpaceRayPoseDriver",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.Interaction.Toolkit.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.AR.Inputs.ScreenSpaceRotateInput",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.Interaction.Toolkit.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.AR.Inputs.ScreenSpaceSelectInput",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.Interaction.Toolkit.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.AR.Inputs.TouchscreenGestureInputLoader",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.Interaction.Toolkit.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.Filtering.TouchscreenHoverFilter",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.Interaction.Toolkit.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.Inputs.InputActionManager",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -1372,70 +1223,7 @@
         {
             "managedAssemblyName": "Unity.XR.Interaction.Toolkit.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.Interaction.Toolkit.dll",
-            "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.InteractionLayerSettings",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.Interaction.Toolkit.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.Interactors.XRInteractionGroup",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.Interaction.Toolkit.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.Interaction.Toolkit.Samples.ARStarterAssets.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets.ARFeatheredPlaneMeshVisualizer",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Assembly-CSharp.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets.ARFeatheredPlaneMeshVisualizerCompanion",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.Interaction.Toolkit.Samples.ARStarterAssets.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.Samples.ARStarterAssets.ARInteractorSpawnTrigger",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.Interaction.Toolkit.Samples.StarterAssets.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.ObjectSpawner",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.Interaction.Toolkit.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.Transformers.ARTransformer",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.XR.Interaction.Toolkit.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.XR.Interaction.Toolkit.UI.XRUIInputModule",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -1450,6 +1238,20 @@
             "managedAssemblyName": "Unity.XR.Management.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.XR.Management.XRManagerSettings",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "VATAnimator",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "VATMetaLoader",
             "moduleName": "",
             "usedInScenes": []
         }

@@ -1,6 +1,0 @@
-<linker>
-  <assembly fullname="Unity.Formats.Alembic">
-    <type fullname="UnityEngine.Formats.Alembic.Importer.AlembicStreamPlayer" preserve="all" />
-    <type fullname="UnityEngine.Formats.Alembic.Importer.AlembicStreamDescriptor" preserve="all" />
-  </assembly>
-</linker>
