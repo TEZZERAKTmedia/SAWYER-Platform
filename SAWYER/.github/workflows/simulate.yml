@@ -6,7 +6,7 @@ on:
 jobs:
   build: 
     runs-on: ubuntu-latest
-      steps:
+    steps:
         - name: Building Frontend for simulation
           uses: actions/checkout@v3
         - run: npm run build react_native

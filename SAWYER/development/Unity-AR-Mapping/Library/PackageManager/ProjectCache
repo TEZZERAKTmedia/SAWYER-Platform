@@ -5,8 +5,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638861449870000000
-    m_Hash: 599635286
+      ticks: 638874575180000000
+    m_Hash: 2729547822
   m_LockFileStatus:
     m_FilePath: /Users/trentynnicholas/Desktop/Robotics/SAWYER/development/Unity-AR-Mapping/Packages/packages-lock.json
     m_PathExists: 1
@@ -519,10 +519,14 @@ m_ResolvedPackages:
     - 4.1.3
     - 4.2.0-pre.1
     - 4.2.0-pre.2
+    - 4.2.0-pre.3
+    - 5.0.0
     compatible:
     - 4.1.3
     - 4.2.0-pre.1
     - 4.2.0-pre.2
+    - 4.2.0-pre.3
+    - 5.0.0
     recommended: 4.1.3
     deprecated: []
   dependencies:
@@ -1182,6 +1186,7 @@ m_ResolvedPackages:
     - 6.2.0-pre.2
     - 6.2.0-pre.3
     - 6.2.0-pre.4
+    - 6.2.0
     compatible:
     - 6.1.0
     - 6.1.1
@@ -1189,6 +1194,7 @@ m_ResolvedPackages:
     - 6.2.0-pre.2
     - 6.2.0-pre.3
     - 6.2.0-pre.4
+    - 6.2.0
     recommended: 6.1.1
     deprecated: []
   dependencies:
@@ -1453,6 +1459,7 @@ m_ResolvedPackages:
     - 6.2.0-pre.2
     - 6.2.0-pre.3
     - 6.2.0-pre.4
+    - 6.2.0
     compatible:
     - 6.1.0
     - 6.1.1
@@ -1460,6 +1467,7 @@ m_ResolvedPackages:
     - 6.2.0-pre.2
     - 6.2.0-pre.3
     - 6.2.0-pre.4
+    - 6.2.0
     recommended: 6.1.1
     deprecated: []
   dependencies:
@@ -1785,6 +1793,7 @@ m_ResolvedPackages:
     - 6.2.0-pre.2
     - 6.2.0-pre.3
     - 6.2.0-pre.4
+    - 6.2.0
     compatible:
     - 6.1.0
     - 6.1.1
@@ -1792,6 +1801,7 @@ m_ResolvedPackages:
     - 6.2.0-pre.2
     - 6.2.0-pre.3
     - 6.2.0-pre.4
+    - 6.2.0
     recommended: 6.1.1
     deprecated: []
   dependencies:
@@ -1970,10 +1980,12 @@ m_ResolvedPackages:
     - 3.1.1
     - 3.1.2
     - 3.2.0-pre.1
+    - 3.2.0
     compatible:
     - 3.1.1
     - 3.1.2
     - 3.2.0-pre.1
+    - 3.2.0
     recommended: 3.1.2
     deprecated: []
   dependencies:
