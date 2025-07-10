@@ -5,7 +5,7 @@ import robot_server
 import bluetooth_server
 import config_manager
 
-MODE = "production"  # Change to "development" as needed
+MODE = "development"  # Change to "development" as needed
 
 def wifi_monitor():
     while True:
