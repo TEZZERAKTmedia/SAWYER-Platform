@@ -2,8 +2,15 @@ import bluetooth
 import json
 import wifi_manager
 import config_manager
+import bluetooth_utils
 
 def start_bluetooth_server(config, mode):
+    print(f"[BluetoothServer] Starting Bluetooth server in MODE: {mode}")
+
+    # Ensure adapter is properly configured
+    bluetooth_utils.configure_bluetooth_state(mode)
+
+    # Setup Bluetooth RFCOMM server
     server_sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
     server_sock.bind(("", bluetooth.PORT_ANY))
     server_sock.listen(1)
@@ -54,7 +61,13 @@ def start_bluetooth_server(config, mode):
             if success:
                 client_sock.send(json.dumps({"status": "success", "message": "Wi-Fi connected"}).encode())
                 print("[BluetoothServer] Provisioning completed successfully")
-                # Here you could also trigger Cloudflare tunnel setup
+
+                # ✅ Turn off discoverable & pairable after successful provisioning
+                if mode == "production":
+                    bluetooth_utils.set_discoverable_pairable(False, False)
+
+                # Optionally trigger Cloudflare tunnel setup here
+
             else:
                 client_sock.send(json.dumps({"status": "error", "message": "Wi-Fi connection failed"}).encode())
 
