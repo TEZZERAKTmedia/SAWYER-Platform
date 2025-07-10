@@ -6,6 +6,10 @@ def set_discoverable_pairable(discoverable=True, pairable=True):
 
     lines = []
 
+    # Always ensure agent is running before making pairable
+    lines.append("agent on")
+    lines.append("default-agent")
+
     if discoverable:
         lines.append("discoverable on")
         lines.append("discoverable-timeout 0")
@@ -17,7 +21,6 @@ def set_discoverable_pairable(discoverable=True, pairable=True):
     else:
         lines.append("pairable off")
 
-    # Combine all commands into one session
     batch_commands = "\n".join(lines) + "\nexit\n"
 
     print(f"[BluetoothUtils] Running bluetoothctl batch:\n{batch_commands}")
@@ -28,6 +31,7 @@ def set_discoverable_pairable(discoverable=True, pairable=True):
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE
     )
+
 
 def configure_bluetooth_state(mode):
     if mode == "development":
