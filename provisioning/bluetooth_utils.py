@@ -4,21 +4,30 @@ import wifi_manager
 def set_discoverable_pairable(discoverable=True, pairable=True):
     print(f"[BluetoothUtils] Setting discoverable={discoverable}, pairable={pairable}")
 
-    cmds = []
+    lines = []
+
     if discoverable:
-        cmds.append("discoverable on")
-        cmds.append("discoverable-timeout 0")
+        lines.append("discoverable on")
+        lines.append("discoverable-timeout 0")
     else:
-        cmds.append("discoverable off")
+        lines.append("discoverable off")
 
     if pairable:
-        cmds.append("pairable on")
+        lines.append("pairable on")
     else:
-        cmds.append("pairable off")
+        lines.append("pairable off")
 
-    for cmd in cmds:
-        print(f"[BluetoothUtils] Running bluetoothctl command: {cmd}")
-        subprocess.run(['bluetoothctl'], input=cmd.encode(), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    # Combine all commands into one session
+    batch_commands = "\n".join(lines) + "\nexit\n"
+
+    print(f"[BluetoothUtils] Running bluetoothctl batch:\n{batch_commands}")
+
+    subprocess.run(
+        ['bluetoothctl'],
+        input=batch_commands.encode(),
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE
+    )
 
 def configure_bluetooth_state(mode):
     if mode == "development":
