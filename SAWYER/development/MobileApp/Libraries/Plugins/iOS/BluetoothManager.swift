@@ -1,93 +1,116 @@
 import Foundation
 import CoreBluetooth
-import UIKit
 import SystemConfiguration.CaptiveNetwork
 
-@objc public class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
+// ——— Declare UnitySendMessage so Swift can call it directly —————
+@_silgen_name("UnitySendMessage")
+func UnitySendMessage(_ obj: UnsafePointer<CChar>,
+                      _ method: UnsafePointer<CChar>,
+                      _ msg: UnsafePointer<CChar>)
 
-    // MARK: - Singleton
+// ——— C Bridge Functions - These match your header declarations —————
+@_cdecl("StartBLEScan")
+func StartBLEScan() {
+    BluetoothManager.shared.startScan()
+}
+
+@_cdecl("StopBLEScan")
+func StopBLEScan() {
+    BluetoothManager.shared.stopScan()
+}
+
+@_cdecl("ConnectToPeripheral")
+func ConnectToPeripheral(_ uuid: UnsafePointer<CChar>) {
+    let uuidString = String(cString: uuid)
+    BluetoothManager.shared.connectToPeripheral(withUUID: uuidString)
+}
+
+@_cdecl("WriteToCharacteristic")
+func WriteToCharacteristic(_ data: UnsafePointer<CChar>) {
+    let dataString = String(cString: data)
+    BluetoothManager.shared.writeToCharacteristicWithDataString(dataString)
+}
+
+@_cdecl("RequestWiFiList")
+func RequestWiFiList() {
+    BluetoothManager.shared.requestWiFiList()
+}
+
+@_cdecl("GetCurrentSSID")
+func GetCurrentSSID() -> UnsafePointer<CChar>? {
+    guard let ssid = BluetoothManager.shared.getCurrentSSID() else {
+        return nil
+    }
+    return UnsafePointer(strdup(ssid))
+}
+
+// ——— BluetoothManager Class —————
+@objc public class BluetoothManager: NSObject,
+                                     CBCentralManagerDelegate,
+                                     CBPeripheralDelegate {
     @objc public static let shared = BluetoothManager()
-
-    // MARK: - Properties
     private var centralManager: CBCentralManager!
     private var discoveredPeripherals: [CBPeripheral] = []
-
     private var connectedPeripheral: CBPeripheral?
     private var targetCharacteristic: CBCharacteristic?
 
-    private var serviceUUID: CBUUID?
-    private var characteristicUUID: CBUUID?
-
-    // MARK: - Init
     override init() {
         super.init()
-        print("[BluetoothManager] Init")
         centralManager = CBCentralManager(delegate: self, queue: nil)
     }
 
-    // MARK: - Public Methods
-
     @objc public func startScan() {
-        print("[BluetoothManager] Start Scanning")
-        discoveredPeripherals.removeAll()
-        if centralManager.state == .poweredOn {
-            centralManager.scanForPeripherals(withServices: nil, options: nil)
-        } else {
-            print("[BluetoothManager] Bluetooth is not powered on")
+        guard centralManager.state == .poweredOn else { 
+            print("Bluetooth not powered on")
+            return 
         }
+        discoveredPeripherals.removeAll()
+        centralManager.scanForPeripherals(withServices: nil, options: nil)
+        print("Started BLE scan")
     }
 
     @objc public func stopScan() {
-        print("[BluetoothManager] Stop Scanning")
         centralManager.stopScan()
+        print("Stopped BLE scan")
     }
 
-    @objc public func connectToPeripheral(withUUID uuidString: String) {
-        print("[BluetoothManager] Connecting to UUID: \(uuidString)")
-        if let peripheral = discoveredPeripherals.first(where: { $0.identifier.uuidString == uuidString }) {
+    @objc public func connectToPeripheral(withUUID uuid: String) {
+        if let peripheral = discoveredPeripherals.first(where: { $0.identifier.uuidString == uuid }) {
             centralManager.connect(peripheral, options: nil)
+            print("Attempting to connect to peripheral: \(uuid)")
         } else {
-            print("[BluetoothManager] Peripheral not found in list")
+            print("Peripheral not found: \(uuid)")
         }
     }
 
-    @objc public func writeToCharacteristic(dataString: String) {
-        guard let peripheral = connectedPeripheral else {
-            print("[BluetoothManager] No connected peripheral")
-            return
+    @objc public func writeToCharacteristicWithDataString(_ dataString: String) {
+        guard let peripheral = connectedPeripheral, 
+              let characteristic = targetCharacteristic,
+              let data = dataString.data(using: .utf8) else { 
+            print("Cannot write - missing peripheral, characteristic, or data")
+            return 
         }
-        guard let characteristic = targetCharacteristic else {
-            print("[BluetoothManager] No target characteristic")
-            return
-        }
-
-        if let data = dataString.data(using: .utf8) {
-            peripheral.writeValue(data, for: characteristic, type: .withResponse)
-            print("[BluetoothManager] Sent data to characteristic")
-        } else {
-            print("[BluetoothManager] Failed to encode data string")
-        }
+        
+        peripheral.writeValue(data, for: characteristic, type: .withResponse)
+        print("Writing data: \(dataString)")
     }
 
-    // NEW: Send request for Wi-Fi list to Pi
     @objc public func requestWiFiList() {
-        print("[BluetoothManager] Sending REQUEST_WIFI_LIST command")
-        writeToCharacteristic(dataString: "REQUEST_WIFI_LIST")
+        writeToCharacteristicWithDataString("REQUEST_WIFI_LIST")
     }
 
-    // NEW: Get iOS device's current connected SSID
     @objc public func getCurrentSSID() -> String? {
-        print("[BluetoothManager] Attempting to get current SSID")
-        if let interfaces = CNCopySupportedInterfaces() as? [String] {
-            for interface in interfaces {
-                if let info = CNCopyCurrentNetworkInfo(interface as CFString) as NSDictionary? {
-                    let ssid = info[kCNNetworkInfoKeySSID as String] as? String
-                    print("[BluetoothManager] Current SSID: \(ssid ?? "None")")
-                    return ssid
-                }
+        guard let interfaces = CNCopySupportedInterfaces() as? [String] else { 
+            print("No supported network interfaces")
+            return nil 
+        }
+        
+        for interfaceName in interfaces {
+            if let info = CNCopyCurrentNetworkInfo(interfaceName as CFString) as NSDictionary?,
+               let ssid = info[kCNNetworkInfoKeySSID as String] as? String {
+                return ssid
             }
         }
-        print("[BluetoothManager] No SSID found")
         return nil
     }
 
@@ -96,88 +119,134 @@ import SystemConfiguration.CaptiveNetwork
     public func centralManagerDidUpdateState(_ central: CBCentralManager) {
         switch central.state {
         case .poweredOn:
-            print("[BluetoothManager] State: Powered On")
+            print("Bluetooth powered on")
         case .poweredOff:
-            print("[BluetoothManager] State: Powered Off")
-        case .unauthorized:
-            print("[BluetoothManager] State: Unauthorized")
-        case .unsupported:
-            print("[BluetoothManager] State: Unsupported")
+            print("Bluetooth powered off")
         case .resetting:
-            print("[BluetoothManager] State: Resetting")
+            print("Bluetooth resetting")
+        case .unauthorized:
+            print("Bluetooth unauthorized")
         case .unknown:
-            print("[BluetoothManager] State: Unknown")
+            print("Bluetooth unknown state")
+        case .unsupported:
+            print("Bluetooth unsupported")
         @unknown default:
-            print("[BluetoothManager] State: Unknown Default")
+            print("Bluetooth unknown default state")
         }
     }
 
     public func centralManager(_ central: CBCentralManager,
                                didDiscover peripheral: CBPeripheral,
-                               advertisementData: [String : Any],
+                               advertisementData: [String: Any],
                                rssi RSSI: NSNumber) {
         if !discoveredPeripherals.contains(peripheral) {
             discoveredPeripherals.append(peripheral)
-
-            let deviceName = peripheral.name ?? "Unknown"
-            let deviceInfo: [String: Any] = [
-                "name": deviceName,
+            let info: [String: Any] = [
+                "name": peripheral.name ?? "Unknown",
                 "uuid": peripheral.identifier.uuidString,
-                "rssi": RSSI
+                "rssi": RSSI.intValue
             ]
-
-            if let jsonData = try? JSONSerialization.data(withJSONObject: deviceInfo, options: []),
-               let jsonString = String(data: jsonData, encoding: .utf8) {
-
-                print("[BluetoothManager] Found Device JSON: \(jsonString)")
-
-                UnitySendMessage("BluetoothGameObject", "OnDeviceFound", jsonString)
+            
+            do {
+                let data = try JSONSerialization.data(withJSONObject: info)
+                if let json = String(data: data, encoding: .utf8) {
+                    UnitySendMessage("BluetoothGameObject", "OnDeviceFound", json)
+                }
+            } catch {
+                print("Error serializing device info: \(error)")
             }
         }
     }
 
     public func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-        print("[BluetoothManager] Connected to \(peripheral.name ?? "Unknown")")
-
         connectedPeripheral = peripheral
         peripheral.delegate = self
-
         UnitySendMessage("BluetoothGameObject", "OnPeripheralConnected", peripheral.identifier.uuidString)
-
         peripheral.discoverServices(nil)
+        print("Connected to peripheral: \(peripheral.identifier.uuidString)")
+    }
+
+    public func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
+        print("Failed to connect to peripheral: \(peripheral.identifier.uuidString), error: \(error?.localizedDescription ?? "Unknown")")
+    }
+
+    public func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
+        if peripheral == connectedPeripheral {
+            connectedPeripheral = nil
+            targetCharacteristic = nil
+        }
+        print("Disconnected from peripheral: \(peripheral.identifier.uuidString)")
     }
 
     // MARK: - CBPeripheralDelegate
 
     public func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
-        if let services = peripheral.services {
-            for service in services {
-                print("[BluetoothManager] Found service: \(service.uuid)")
-                peripheral.discoverCharacteristics(nil, for: service)
-            }
+        if let error = error {
+            print("Error discovering services: \(error.localizedDescription)")
+            return
+        }
+        
+        peripheral.services?.forEach { service in
+            peripheral.discoverCharacteristics(nil, for: service)
         }
     }
 
-    public func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
-        if let characteristics = service.characteristics {
+    public func peripheral(_ peripheral: CBPeripheral,
+                           didDiscoverCharacteristicsFor service: CBService,
+                           error: Error?) {
+        if let error = error {
+            print("Error discovering characteristics: \(error.localizedDescription)")
+            return
+        }
+        
+        if targetCharacteristic == nil, let characteristics = service.characteristics {
+            // Find a writable characteristic
             for characteristic in characteristics {
-                print("[BluetoothManager] Found characteristic: \(characteristic.uuid)")
-
-                // Store first characteristic found
-                if targetCharacteristic == nil {
+                if characteristic.properties.contains(.write) || characteristic.properties.contains(.writeWithoutResponse) {
                     targetCharacteristic = characteristic
-                    print("[BluetoothManager] Target characteristic set")
+                    print("Found writable characteristic: \(characteristic.uuid)")
+                    break
                 }
             }
+            
+            // If no writable characteristic found, use the first one
+            if targetCharacteristic == nil {
+                targetCharacteristic = characteristics.first
+                print("Using first characteristic: \(characteristics.first?.uuid.uuidString ?? "Unknown")")
+            }
+        }
+        
+        // Subscribe to notifications for all characteristics that support it
+        service.characteristics?.forEach { characteristic in
+            if characteristic.properties.contains(.notify) {
+                peripheral.setNotifyValue(true, for: characteristic)
+                print("Subscribed to notifications for characteristic: \(characteristic.uuid)")
+            }
         }
     }
 
-    public func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        if let data = characteristic.value, let message = String(data: data, encoding: .utf8) {
-            print("[BluetoothManager] Received from Peripheral: \(message)")
-
-            // Assuming Wi-Fi list JSON or provisioning responses
+    public func peripheral(_ peripheral: CBPeripheral,
+                           didUpdateValueFor characteristic: CBCharacteristic,
+                           error: Error?) {
+        if let error = error {
+            print("Error updating value for characteristic: \(error.localizedDescription)")
+            return
+        }
+        
+        if let data = characteristic.value,
+           let message = String(data: data, encoding: .utf8) {
             UnitySendMessage("BluetoothGameObject", "OnDataReceived", message)
+            print("Received data: \(message)")
+        }
+    }
+
+    public func peripheral(_ peripheral: CBPeripheral,
+                           didWriteValueFor characteristic: CBCharacteristic,
+                           error: Error?) {
+        if let error = error {
+            print("Error writing to characteristic: \(error.localizedDescription)")
+        } else {
+            print("Successfully wrote to characteristic: \(characteristic.uuid)")
         }
     }
 }

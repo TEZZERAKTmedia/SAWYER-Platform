@@ -2,15 +2,14 @@
 extern "C" {
 #endif
 
-//These signatures must match the C# [DllImport("__Internal")] declarations exactly
+// These must exactly match your C# [DllImport("__Internal")]
 void StartBLEScan(void);
 void StopBLEScan(void);
-void ConnectToPerioheral(const char* uuid);
+void ConnectToPeripheral(const char* uuid);
 void WriteToCharacteristic(const char* data);
-void RequestWifiList(void);
+void RequestWiFiList(void);
 const char* GetCurrentSSID(void);
 
 #ifdef __cplusplus
-
 }
 #endif
