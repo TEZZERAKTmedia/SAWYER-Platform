@@ -2199,8 +2199,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 634060464}
   m_HandleRect: {fileID: 634060463}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 0.9999985
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -10876,7 +10876,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0013834885}
+  m_AnchoredPosition: {x: 0, y: -0.00007369022}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1326537522
@@ -13094,6 +13094,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1537134786}
+  - component: {fileID: 1537134787}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -13120,6 +13121,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -0.00009876228}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &1537134787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537134785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &1537412165
 GameObject:
   m_ObjectHideFlags: 0
@@ -13714,7 +13741,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1883306272}
   deviceListContainer: {fileID: 2012405327}
-  deviceButtonPrefab: {fileID: 0}
+  deviceButtonPrefab: {fileID: 2160970423780555547, guid: d4d14bad3376a4fedba21e565e9717a1,
+    type: 3}
 --- !u!1 &1589476217
 GameObject:
   m_ObjectHideFlags: 0
@@ -16630,7 +16658,10 @@ MonoBehaviour:
   closeFlowButtons:
   - {fileID: 663954966}
   simulationMode: 1
-  simulatedBluetoothDevices: []
+  simulatedBluetoothDevices:
+  - 'Test 1 '
+  - 'Test 2 '
+  - 'Test 2 '
   simulatedWifiNetworks: []
 --- !u!114 &1883306273
 MonoBehaviour:

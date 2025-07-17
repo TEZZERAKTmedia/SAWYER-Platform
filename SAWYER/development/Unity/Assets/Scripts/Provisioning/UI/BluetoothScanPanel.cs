@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class BluetoothScanPanel : MonoBehaviour
@@ -18,7 +19,7 @@ public class BluetoothScanPanel : MonoBehaviour
         foreach (var name in deviceNames)
         {
             var btnObj = Instantiate(deviceButtonPrefab, deviceListContainer);
-            btnObj.GetComponentInChildren<Text>().text = name;
+            btnObj.GetComponentInChildren<TextMeshProUGUI>().text = name;
             btnObj.GetComponent<Button>().onClick.AddListener(() =>
             {
                 OnDeviceSelected(name);
