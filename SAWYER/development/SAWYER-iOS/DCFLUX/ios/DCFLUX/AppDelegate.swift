@@ -36,15 +36,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   @objc func openProvisioningFlow() {
     DispatchQueue.main.async {
-      let provisioningVC = RCTRootView(
-        bridge: self.navigationController?.viewControllers.first?.view as? RCTRootView
-          == nil ? nil : (self.navigationController?.viewControllers.first as! RCTRootView).bridge,
-        moduleName: "DCFLUX",
-        initialProperties: ["initialRoute": "Provisioning"]
-      )
-      let vc = UIViewController()
-      vc.view = provisioningVC
-      self.navigationController?.pushViewController(vc, animated: true)
+      if let rootVC = self.navigationController?.viewControllers.first,
+        let rootView = rootVC.view as? RCTRootView,
+        let bridge = rootView.bridge {
+
+        let jsCode = """
+          require('react-native').DeviceEventEmitter.emit('OpenProvisioningFlow');
+        """
+
+        bridge.enqueueJSCall("RCTDeviceEventEmitter", method: "emit", args: ["OpenProvisioningFlow"], completion: nil)
+      }
     }
   }
+
 }

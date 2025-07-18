@@ -57,7 +57,7 @@ public class BuildConfigRN_Unity : IPreprocessBuildWithReport
             return;
         }
 
-        string buildPath = "../SAWYER-iOS/DCFLUX/Unity-iOS";
+        string buildPath = "../SAWYER-iOS/DCFLUX/ios/Unity-iOS";
 
         Debug.Log("[BuildConfigurator] 🚀 Starting iOS framework build...");
         Debug.Log("[BuildConfigurator] 📦 Output Path: " + buildPath);
