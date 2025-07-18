@@ -1,47 +1,34 @@
 #!/bin/bash
 
-# SAWYER Unity Modular Build Script
+# SAWYER Unified Unity iOS Build Script
 
 UNITY_PATH="/Applications/Unity/Hub/Editor/6000.1.4f1/Unity.app/Contents/MacOS/Unity"
+PROJECT_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")/development/Unity" && pwd)"
+BUILD_METHOD="BuildConfigRN_Unity.BuildiOSProject"
+LOG_FILE="$(dirname "${BASH_SOURCE[0]}")/Logs/unity-ios-build.log"
 
-declare -a builds=(
-  "development/Unity-3d-UI:AutoBuildHookUI.BuildiOSApp"
-  "development/Unity-AR-Mapping:AutoBuildHookARMapping.BuildiOSApp"
-  "development/Unity-Editor:AutoBuildHookEditor.BuildiOSApp"
-)
+mkdir -p "$(dirname "$LOG_FILE")"
 
-mkdir -p Logs
+echo "🚀 Starting iOS build from unified Unity project"
+echo "📁 Project Path: $PROJECT_PATH"
+echo "🔧 Build Method: $BUILD_METHOD"
+echo "📝 Log File: $LOG_FILE"
 
-for entry in "${builds[@]}"; do 
-  IFS=":" read -r project method <<< "$entry"
+"$UNITY_PATH" \
+  -batchmode -nographics -quit \
+  -projectPath "$PROJECT_PATH" \
+  -executeMethod "$BUILD_METHOD" \
+  -logFile "$LOG_FILE"
 
-  if [[ -z "$project" || -z "$method" ]]; then
-    echo "⚠️  Skipping invalid entry: '$entry'"
-    continue
-  fi
+EXIT_CODE=$?
 
-  LOG_FILE="Logs/$(basename "$project")-build.log"
+if [[ $EXIT_CODE -ne 0 ]]; then
+  echo "❌ Build failed (exit $EXIT_CODE)"
+  echo "➡️  Check log: $LOG_FILE"
+  exit $EXIT_CODE
+else
+  echo "✅ Build succeeded"
+  echo "📦 Xcode project should be in: development/SAWYER-iOS/DCFLUX/ios"
+fi
 
-  echo "🚀 Building: $project"
-  echo "🔧 Method:  $method"
-  echo "📝 Log: $LOG_FILE"
-
-  "$UNITY_PATH" \
-    -batchmode -nographics -quit \
-    -projectPath "$project" \
-    -executeMethod "$method" \
-    -logFile "$LOG_FILE"
-
-  EXIT_CODE=$?
-  if [[ $EXIT_CODE -ne 0 ]]; then
-    echo "❌ Build failed for $project (exit $EXIT_CODE)"
-    echo "➡️  Check log: $LOG_FILE"
-    exit $EXIT_CODE
-  else
-    echo "✅ Build succeeded for $project"
-  fi
-
-  echo "----------------------------------------"
-done
-
-echo "🎉 All Unity builds complete!"
+echo "🎉 Build complete!"
