@@ -14272,7 +14272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: AR
-  preserveSceneState: 1
+  preserveSceneState: 0
 --- !u!1 &367658686155503463
 GameObject:
   m_ObjectHideFlags: 0

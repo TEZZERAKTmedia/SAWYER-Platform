@@ -14,9 +14,6 @@ public class BuildConfigRN_Unity : IPreprocessBuildWithReport
 
         if (report.summary.platform == BuildTarget.iOS)
         {
-            // ✅ Build as UnityFramework
-            EditorUserBuildSettings.iOSBuildType = iOSBuildType.Framework;
-
             // ✅ Bundle Identifier
             PlayerSettings.applicationIdentifier = "com.yourcompany.dcflux";
 
@@ -46,7 +43,6 @@ public class BuildConfigRN_Unity : IPreprocessBuildWithReport
         }
     }
 
-    // ✅ Manual build method if you want to trigger via script or terminal
     [MenuItem("Build/iOS Build to DCFLUX")]
     public static void BuildiOSProject()
     {
@@ -61,7 +57,7 @@ public class BuildConfigRN_Unity : IPreprocessBuildWithReport
             return;
         }
 
-        string buildPath = "../SAWYER-iOS/DCFLUX/ios";
+        string buildPath = "../SAWYER-iOS/DCFLUX/Unity-iOS";
 
         Debug.Log("[BuildConfigurator] 🚀 Starting iOS framework build...");
         Debug.Log("[BuildConfigurator] 📦 Output Path: " + buildPath);
