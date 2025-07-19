@@ -1,11 +1,11 @@
+using UnityEditor;
+using UnityEditor.Callbacks;
+using UnityEngine;
+using System.IO;
+
 #if UNITY_IOS
 using UnityEditor.iOS.Xcode;
 #endif
-
-using UnityEditor;
-using UnityEditor.Callbacks;
-using System.IO;
-using UnityEngine;
 
 public class CopyNativeBridgePostBuild
 {
@@ -15,52 +15,38 @@ public class CopyNativeBridgePostBuild
         if (buildTarget != BuildTarget.iOS)
             return;
 
-        string unityBridgePath = Path.Combine(Application.dataPath, "Plugins/iOS/NativeBridge");
-        string targetBridgePath = Path.Combine(pathToBuiltProject, "NativeBridge");
-
-        if (!Directory.Exists(unityBridgePath))
-        {
-            Debug.LogWarning("[NativeBridge] No NativeBridge folder found in Unity project.");
-            return;
-        }
-
-        Directory.CreateDirectory(targetBridgePath);
-        foreach (var file in Directory.GetFiles(unityBridgePath))
-        {
-            var fileName = Path.GetFileName(file);
-            File.Copy(file, Path.Combine(targetBridgePath, fileName), overwrite: true);
-        }
-
-        Debug.Log("[NativeBridge] ✅ Copied Swift bridge files to Xcode iOS project.");
+#if UNITY_IOS
+        Debug.Log("⚙️ Post-build script running...");
 
         string projPath = PBXProject.GetPBXProjectPath(pathToBuiltProject);
         PBXProject proj = new PBXProject();
         proj.ReadFromFile(projPath);
 
-#if UNITY_2019_3_OR_NEWER
-        string targetGuid = proj.GetUnityMainTargetGuid();
-        string frameworkGuid = proj.GetUnityFrameworkTargetGuid();
-#else 
-        string targetGuid = proj.TargetGuidByName("Unity-iPhone");
-        string frameworkGuid = targetGuid;
-#endif 
-        foreach (var file in Directory.GetFiles(targetBridgePath, "*.swift"))
+        string frameworkTarget = proj.GetUnityFrameworkTargetGuid();
+
+        proj.SetBuildProperty(frameworkTarget, "SWIFT_VERSION", "5.0");
+        proj.SetBuildProperty(frameworkTarget, "ENABLE_BITCODE", "NO");
+        proj.SetBuildProperty(frameworkTarget, "ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES", "YES");
+        proj.SetBuildProperty(frameworkTarget, "DEFINES_MODULE", "YES");
+
+        // ⚠️ Your actual Swift source file
+        string nativeBridgeDir = Path.Combine(Directory.GetCurrentDirectory(), "../SAWYER-iOS/DCFLUX/NativeBridge");
+        string[] swiftFiles = Directory.GetFiles(nativeBridgeDir, "*.swift");
+
+        foreach (var file in swiftFiles)
         {
-            var relativePath = "NativeBridge/" + Path.GetFileName(file);
-            var fileGuid = proj.AddFile(file, relativePath, PBXSourceTree.Source);
-            proj.AddFileToBuild(frameworkGuid, fileGuid);
+            string fileName = Path.GetFileName(file);
+            string fullPath = Path.GetFullPath(file);
+            string relativePath = Path.Combine("..", "..", "SAWYER-iOS", "DCFLUX", "NativeBridge", fileName);
+
+            Debug.Log($"📎 Linking Swift file: {relativePath}");
+
+            proj.AddFileToBuild(frameworkTarget, proj.AddFile(relativePath, fileName, PBXSourceTree.Source));
         }
-
-        proj.SetBuildProperty(frameworkGuid, "SWIFT_VERSION", "5.0");
-        proj.SetBuildProperty(frameworkGuid, "ENABLE_BITCODE", "NO");
-        proj.SetBuildProperty(frameworkGuid, "ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES", "YES");
-        proj.SetBuildProperty(frameworkGuid, "DEFINES_MODULE", "YES");
-
 
         proj.WriteToFile(projPath);
 
-        Debug.Log("[NativeBridge] Linked Swift bridge files into Unity-iPhone.xcodeproj.");
-
-        
+        Debug.Log("✅ NativeBridge files linked successfully.");
+#endif
     }
 }

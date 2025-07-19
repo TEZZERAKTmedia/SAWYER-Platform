@@ -64,7 +64,6 @@
 		59AFA8F6DB1E25099CCAFB89 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E997E8735A09F89C0365D60D /* SystemConfiguration.framework */; };
 		5F5BA7A58276A2C459108A01 /* UndefinePlatforms.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A6DD026291028B2A1ED4E66 /* UndefinePlatforms.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5F7F88DF4BFAD6727306ACA5 /* ActivityIndicator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D1090A0C7074B4878ECB7 /* ActivityIndicator.mm */; };
-		60814A53AD6271F7D0AC4282 /* openProvisioningFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE44736E379C827426FD5F5E /* openProvisioningFlow.swift */; };
 		63ACF7178776C648B96974EB /* baselib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD8D832DF5E49F3229DE515 /* baselib.a */; };
 		6412DCBAA9529A01D381C747 /* Filesystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = F5B58EA838E650B8EF348294 /* Filesystem.mm */; };
 		67A617E5FFD67C6B9FBA0A15 /* MetalHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 49265D736859235BFB6D1FF6 /* MetalHelper.mm */; };
@@ -144,13 +143,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3C294DC88411D3A751559135 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9D25AB9C213FB47800354C27;
-			remoteInfo = UnityFramework;
-		};
 		5623C58117FDCB0900090B9E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -166,6 +158,13 @@
 			remoteInfo = GameAssembly;
 		};
 		9D25ABA2213FB47800354C27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D25AB9C213FB47800354C27;
+			remoteInfo = UnityFramework;
+		};
+		E1964C238948E3FD6103DDAB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
@@ -739,7 +738,6 @@
 		DCFF8C91896C4981029286E5 /* System.Core_CodeGen.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = System.Core_CodeGen.c; path = Il2CppOutputProject/Source/il2cppOutput/System.Core_CodeGen.c; sourceTree = SOURCE_ROOT; };
 		DD9AC434A47204F3A1DF289D /* Generics__78.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Generics__78.cpp; path = Il2CppOutputProject/Source/il2cppOutput/Generics__78.cpp; sourceTree = SOURCE_ROOT; };
 		DDB2F8BB5DC4E5D804C3C134 /* Il2CppCCalculateFieldValues1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Il2CppCCalculateFieldValues1.cpp; path = Il2CppOutputProject/Source/il2cppOutput/Il2CppCCalculateFieldValues1.cpp; sourceTree = SOURCE_ROOT; };
-		DE44736E379C827426FD5F5E /* openProvisioningFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = openProvisioningFlow.swift; path = Libraries/Plugins/iOS/NativeBridge/openProvisioningFlow.swift; sourceTree = SOURCE_ROOT; };
 		DE4ECF62B48AC921AEAF57B6 /* UnityReplayKit_Scripting.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = UnityReplayKit_Scripting.mm; path = Classes/Unity/UnityReplayKit_Scripting.mm; sourceTree = SOURCE_ROOT; };
 		DEE771C3E5C50BFE1CC0E1B7 /* UnityViewControllerListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UnityViewControllerListener.h; path = Classes/PluginBase/UnityViewControllerListener.h; sourceTree = SOURCE_ROOT; };
 		DF8EF45DA784D0647AAAC157 /* Unity.RenderPipelines.Core.Runtime.Shared.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Unity.RenderPipelines.Core.Runtime.Shared.cpp; path = Il2CppOutputProject/Source/il2cppOutput/Unity.RenderPipelines.Core.Runtime.Shared.cpp; sourceTree = SOURCE_ROOT; };
@@ -1031,14 +1029,6 @@
 				EB1CC5E9B4170C22555C2D0F /* VideoPlayer.mm */,
 			);
 			path = Unity;
-			sourceTree = "<group>";
-		};
-		3172EDAC779971810915BDFC /* NativeBridge */ = {
-			isa = PBXGroup;
-			children = (
-				DE44736E379C827426FD5F5E /* openProvisioningFlow.swift */,
-			);
-			path = NativeBridge;
 			sourceTree = "<group>";
 		};
 		422650D8624B525FDCCF23B1 /* com.unity.xr.arkit */ = {
@@ -1541,14 +1531,6 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
-		53D667C6AFCF5C846FB3B413 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3172EDAC779971810915BDFC /* NativeBridge */,
-			);
-			path = iOS;
-			sourceTree = "<group>";
-		};
 		5623C57817FDCB0800090B9E /* Unity-iPhone Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -1668,7 +1650,6 @@
 		D8A1C7220E80637F000160D3 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				E65BCBDDB23DA191911454C2 /* Plugins */,
 				0DB64C2E13F03F7FFEA29216 /* com.unity.inputsystem */,
 				422650D8624B525FDCCF23B1 /* com.unity.xr.arkit */,
 				C63B33A2B4E66BC2927EB1FF /* Il2CppOptions.cpp */,
@@ -1681,14 +1662,6 @@
 			);
 			path = Libraries;
 			sourceTree = SOURCE_ROOT;
-		};
-		E65BCBDDB23DA191911454C2 /* Plugins */ = {
-			isa = PBXGroup;
-			children = (
-				53D667C6AFCF5C846FB3B413 /* iOS */,
-			);
-			path = Plugins;
-			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -1770,7 +1743,7 @@
 			);
 			dependencies = (
 				9D25ABA3213FB47800354C27 /* PBXTargetDependency */,
-				A19946859D1B0AA61B1B2A83 /* PBXTargetDependency */,
+				B59B4BF3937128CBAF7B9A6C /* PBXTargetDependency */,
 			);
 			name = "Unity-iPhone";
 			productName = "iPhone-target";
@@ -1960,7 +1933,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				31225D1650DC00B5516F4BE8 /* UnityARKit.m in Sources */,
-				60814A53AD6271F7D0AC4282 /* openProvisioningFlow.swift in Sources */,
 				030A68812E193A334BDD7087 /* iOSStepCounter.mm in Sources */,
 				9BA70426A90DB33FFDF35A71 /* lib_burst_generated.cpp in Sources */,
 				D68A2D92E86446856C4F6FF9 /* InternalProfiler.cpp in Sources */,
@@ -2025,10 +1997,10 @@
 			target = 9D25AB9C213FB47800354C27 /* UnityFramework */;
 			targetProxy = 9D25ABA2213FB47800354C27 /* PBXContainerItemProxy */;
 		};
-		A19946859D1B0AA61B1B2A83 /* PBXTargetDependency */ = {
+		B59B4BF3937128CBAF7B9A6C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9D25AB9C213FB47800354C27 /* UnityFramework */;
-			targetProxy = 3C294DC88411D3A751559135 /* PBXContainerItemProxy */;
+			targetProxy = E1964C238948E3FD6103DDAB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2090,7 +2062,6 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "DCFLUX/BridgingHeader/DCFLUX-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				UNITY_RUNTIME_VERSION = 6000.1.4f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
@@ -2141,7 +2112,6 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "DCFLUX/BridgingHeader/DCFLUX-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				UNITY_RUNTIME_VERSION = 6000.1.4f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
@@ -2184,7 +2154,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/$(PRODUCT_NAME_APP).app/$(PRODUCT_NAME_APP)";
 				UNITY_RUNTIME_VERSION = 6000.1.4f1;
@@ -2237,7 +2206,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/$(PRODUCT_NAME_APP).app/$(PRODUCT_NAME_APP)";
 				UNITY_RUNTIME_VERSION = 6000.1.4f1;
@@ -2282,7 +2250,6 @@
 				PRODUCT_NAME_APP = ARMapping;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
-				SWIFT_VERSION = 5.0;
 			};
 			name = ReleaseForRunning;
 		};
@@ -2331,7 +2298,6 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "DCFLUX/BridgingHeader/DCFLUX-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				UNITY_RUNTIME_VERSION = 6000.1.4f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
@@ -2374,7 +2340,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/$(PRODUCT_NAME_APP).app/$(PRODUCT_NAME_APP)";
 				UNITY_RUNTIME_VERSION = 6000.1.4f1;
@@ -2420,7 +2385,6 @@
 				PRODUCT_NAME_APP = ARMapping;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
-				SWIFT_VERSION = 5.0;
 			};
 			name = ReleaseForProfiling;
 		};
@@ -2468,7 +2432,6 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "DCFLUX/BridgingHeader/DCFLUX-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				UNITY_RUNTIME_VERSION = 6000.1.4f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
@@ -2511,7 +2474,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/$(PRODUCT_NAME_APP).app/$(PRODUCT_NAME_APP)";
 				UNITY_RUNTIME_VERSION = 6000.1.4f1;
@@ -2680,7 +2642,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -2749,7 +2710,6 @@
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
 				SUPPORTED_PLATFORMS = iphoneos;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				UNITY_RUNTIME_VERSION = 6000.1.4f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
@@ -2764,7 +2724,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -2834,7 +2793,6 @@
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
 				SUPPORTED_PLATFORMS = iphoneos;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				UNITY_RUNTIME_VERSION = 6000.1.4f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
@@ -2849,7 +2807,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -2920,7 +2877,6 @@
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
 				SUPPORTED_PLATFORMS = iphoneos;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				UNITY_RUNTIME_VERSION = 6000.1.4f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
@@ -2935,7 +2891,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -3007,7 +2962,6 @@
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
 				SUPPORTED_PLATFORMS = iphoneos;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				UNITY_RUNTIME_VERSION = 6000.1.4f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
@@ -3053,7 +3007,6 @@
 				PRODUCT_NAME_APP = ARMapping;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -3093,7 +3046,6 @@
 				PRODUCT_NAME_APP = ARMapping;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
