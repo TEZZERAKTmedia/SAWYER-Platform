@@ -43,6 +43,7 @@
 		3A18055747C7C86221D72D07 /* UnityViewControllerBase+tvOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = E95F69E8266F65D505F8448E /* UnityViewControllerBase+tvOS.mm */; };
 		3D0925765C1334DF082445DA /* UnityRendering.h in Headers */ = {isa = PBXBuildFile; fileRef = FB086F6145558D70FC612B3B /* UnityRendering.h */; };
 		3D10ABABCE94A7F9EB4C3D64 /* libUnityARKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 467F52407417FE168FA03035 /* libUnityARKit.a */; };
+		3F5B46D28035E5F16507972C /* openProvisioningFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B4470AB598F26F3CA3B2DE /* openProvisioningFlow.swift */; };
 		415674EFD2EC187355BC05B1 /* LaunchScreen-iPhoneLandscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E24B93E9D27D99850693BAF /* LaunchScreen-iPhoneLandscape.png */; };
 		4206105962EED44BFA4F9BD3 /* OrientationSupport.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDE89198A4FD69E85C6A52 /* OrientationSupport.mm */; };
 		443730AA2B4ED688E8818488 /* OrientationSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0E35CAADD8155085A01C93 /* OrientationSupport.h */; };
@@ -164,7 +165,7 @@
 			remoteGlobalIDString = 9D25AB9C213FB47800354C27;
 			remoteInfo = UnityFramework;
 		};
-		E1964C238948E3FD6103DDAB /* PBXContainerItemProxy */ = {
+		D57540A2B213A13543EBE530 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
@@ -513,6 +514,7 @@
 		7E591B394E3B9E70466B37B7 /* FullScreenVideoPlayer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = FullScreenVideoPlayer.mm; path = Classes/Unity/FullScreenVideoPlayer.mm; sourceTree = SOURCE_ROOT; };
 		7F4E05A02717216D00A2CBE4 /* libGameAssembly.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGameAssembly.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F83B23D496299923A2010A3 /* UnityAppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UnityAppController.h; path = Classes/UnityAppController.h; sourceTree = SOURCE_ROOT; };
+		80B4470AB598F26F3CA3B2DE /* openProvisioningFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = openProvisioningFlow.swift; path = "/Users/trentynnicholas/Desktop/Robotics/SAWYER/development/SAWYER-iOS/DCFLUX/NativeBridge/openProvisioningFlow.swift"; sourceTree = SOURCE_ROOT; };
 		816D9611DD1815A55B01E4AF /* Generics__122.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Generics__122.cpp; path = Il2CppOutputProject/Source/il2cppOutput/Generics__122.cpp; sourceTree = SOURCE_ROOT; };
 		816FDCA20CB4A3E8F33CC76A /* Generics__60.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Generics__60.cpp; path = Il2CppOutputProject/Source/il2cppOutput/Generics__60.cpp; sourceTree = SOURCE_ROOT; };
 		819047620E696849091E2665 /* Unity.XR.Management_CodeGen.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = Unity.XR.Management_CodeGen.c; path = Il2CppOutputProject/Source/il2cppOutput/Unity.XR.Management_CodeGen.c; sourceTree = SOURCE_ROOT; };
@@ -957,6 +959,7 @@
 				5A3A1B4C3FB1FC90023B942E /* LaunchScreen-iPhone.storyboard */,
 				1E24B93E9D27D99850693BAF /* LaunchScreen-iPhoneLandscape.png */,
 				681AA63C19788ACA381FB8C1 /* LaunchScreen-iPhonePortrait.png */,
+				ED0B4304ABE0721FC7EF7F22 /* NativeBridge */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -1663,6 +1666,14 @@
 			path = Libraries;
 			sourceTree = SOURCE_ROOT;
 		};
+		ED0B4304ABE0721FC7EF7F22 /* NativeBridge */ = {
+			isa = PBXGroup;
+			children = (
+				80B4470AB598F26F3CA3B2DE /* openProvisioningFlow.swift */,
+			);
+			path = NativeBridge;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1743,7 +1754,7 @@
 			);
 			dependencies = (
 				9D25ABA3213FB47800354C27 /* PBXTargetDependency */,
-				B59B4BF3937128CBAF7B9A6C /* PBXTargetDependency */,
+				BE814757A75A88DE3B12D4B5 /* PBXTargetDependency */,
 			);
 			name = "Unity-iPhone";
 			productName = "iPhone-target";
@@ -1910,6 +1921,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B37DE0B08E88F1C42C102846 /* main.mm in Sources */,
+				3F5B46D28035E5F16507972C /* openProvisioningFlow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1997,10 +2009,10 @@
 			target = 9D25AB9C213FB47800354C27 /* UnityFramework */;
 			targetProxy = 9D25ABA2213FB47800354C27 /* PBXContainerItemProxy */;
 		};
-		B59B4BF3937128CBAF7B9A6C /* PBXTargetDependency */ = {
+		BE814757A75A88DE3B12D4B5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9D25AB9C213FB47800354C27 /* UnityFramework */;
-			targetProxy = E1964C238948E3FD6103DDAB /* PBXContainerItemProxy */;
+			targetProxy = D57540A2B213A13543EBE530 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2062,6 +2074,7 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "DCFLUX/BridgingHeader/DCFLUX-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				UNITY_RUNTIME_VERSION = 6000.1.4f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
@@ -2112,6 +2125,7 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "DCFLUX/BridgingHeader/DCFLUX-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				UNITY_RUNTIME_VERSION = 6000.1.4f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
@@ -2298,6 +2312,7 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "DCFLUX/BridgingHeader/DCFLUX-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				UNITY_RUNTIME_VERSION = 6000.1.4f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
@@ -2432,6 +2447,7 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "DCFLUX/BridgingHeader/DCFLUX-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				UNITY_RUNTIME_VERSION = 6000.1.4f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
@@ -2710,6 +2726,7 @@
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
 				SUPPORTED_PLATFORMS = iphoneos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				UNITY_RUNTIME_VERSION = 6000.1.4f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
@@ -2793,6 +2810,7 @@
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
 				SUPPORTED_PLATFORMS = iphoneos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				UNITY_RUNTIME_VERSION = 6000.1.4f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
@@ -2877,6 +2895,7 @@
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
 				SUPPORTED_PLATFORMS = iphoneos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				UNITY_RUNTIME_VERSION = 6000.1.4f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
@@ -2962,6 +2981,7 @@
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
 				SUPPORTED_PLATFORMS = iphoneos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				UNITY_RUNTIME_VERSION = 6000.1.4f1;
 				UNITY_SCRIPTING_BACKEND = il2cpp;
